@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23607122-5EA1-4D9E-9E3F-A781B6F82D27}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>b</RootNamespace>
+    <AssemblyName>b</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI">
+      <HintPath>..\Computer\Developing\Progetti\ELZLOADER Project\ELZLOADER\bin\Release\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="InterceptionSharp">
+      <HintPath>..\InterceptionSharp V1\InterceptionSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroSuite 2.0">
+      <HintPath>..\Computer\Developing\Progetti\ELZLOADER Project\ELZLOADER\bin\Release\MetroSuite 2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="ProtoRandom">
+      <HintPath>..\ProtoRandom.dll</HintPath>
+    </Reference>
+    <Reference Include="Siticone.UI">
+      <HintPath>..\Computer\Developing\Progetti\ELZLOADER Project\ELZLOADER\bin\Release\Siticone.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Forms\c.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\c.Designer.cs">
+      <DependentUpon>c.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Program.cs" />
+    <Compile Include="Utils\Utils.cs" />
+    <EmbeddedResource Include="Forms\c.resx">
+      <DependentUpon>c.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
